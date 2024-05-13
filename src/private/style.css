@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    .index-hero-img {
+        @apply lg:h-52 lg:w-64 w-16 h-10 rounded-lg shadow-2xl shadow-blue-500;
+    }
+
+    .container {
+        @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;
+    }
+
+    .anchor-hover {
+        @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500;
+    }
+
+    .gradient-hover-outer {
+        @apply p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200;
+    }
+
+    .gradient-hover-inner {
+        @apply bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50;
+    }
+
+    .h2-style {
+        @apply text-5xl leading-normal sm:font-semibold max-w-2xl;
+    }
+
+    .cont-serv {
+        @apply mx-3 bg-pink-500 p-3 rounded-lg flex items-center my-5;
+    }
+
+    .sec-div {
+        @apply w-32 h-36 m-4 overflow-hidden gap-5 transform transition duration-300 ease-in-out relative filter grayscale hover:grayscale-0 hover:scale-125 peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
+    }
+
+    .sec-heading {
+        @apply flex items-center justify-center bg-green-600 text-center text-xs font-semibold sec-img;
+    }
+
+    .sec-img {
+        @apply rounded-full w-28 h-28 shadow-xl peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
+    }
+
+    .sec-text {
+        @apply absolute text-black text-xs font-semibold opacity-0 transition-all text-wrap text-center duration-300 px-2;
+    }
+
+    .quick-box {
+        @apply rounded-lg bg-red-300 px-3 font-bold border-yellow-300 border text-xs hover:bg-gradient-to-b hover:from-red-400 hover:via-red-500 hover:to-red-600 hover:scale-110 overflow-hidden transition-all ease-in-out duration-500;
+    }
+
+
+
+    /* Components of Departments */
+
+    /* Department details */
+    /* Doctor list */
+
+    /* All Departmentsection */
+
+    .all-depsec-main {
+        @apply grid items-center  mx-2 bg-gradient-to-bl from-blue-50 to-blue-100 w-fit rounded-lg px-4 py-5
+    }
+
+    .all-dephead{
+        @apply flex justify-center font-bold text-3xl p-6;
+    }
+
+    .all-depdiv{
+        @apply flex items-center flex-wrap gap-x-0 justify-center ;
+    }
+
+
+}
