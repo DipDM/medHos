@@ -6,7 +6,7 @@
 @layer base {
 
     .index-hero-img {
-        @apply lg:h-52 lg:w-64 w-16 h-10 rounded-lg shadow-2xl shadow-blue-500;
+        @apply  shadow-2xl shadow-blue-500 rounded-sm absolute brightness-110 contrast-125;
     }
 
     .container {
