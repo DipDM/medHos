@@ -30,11 +30,11 @@
     }
 
     .cont-serv {
-        @apply mx-3  p-3 rounded-lg flex flex-row row-span-5 w-screen flex-wrap items-center my-5 ;
+        @apply mx-3  p-3 rounded-lg grid grid-cols-6 w-screen flex-wrap items-center my-5 ;
     }
 
     .sec-div {
-        @apply w-32 h-36 m-4 overflow-hidden gap-5 transform transition duration-300 ease-in-out relative filter grayscale hover:grayscale-0 hover:scale-125 peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
+        @apply w-40 h-36 m-4  overflow-hidden gap-5 transform transition duration-300 ease-in-out relative filter grayscale hover:grayscale-0 hover:scale-125 peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
     }
 
     .sec-heading {
@@ -59,7 +59,7 @@
 
     /* Department details */
     /* Doctor list */
-
+/*w-40 h-20 flex justify-center items-center text-sky-200 border-2 rounded-lg border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]"*/
     /* All Departmentsection */
 
     .all-depsec-main {

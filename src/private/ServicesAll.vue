@@ -6,12 +6,15 @@
       
     </div>
     <a href="" class="text-4xl">{{ Servicefitft }}</a>
-    <!-- <img :src="services[10].imagePath" alt="asdasd"> -->
+    <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
   </div>
-  <div class="cont-serv">
-    <div v-for="(service,index) in services" :key="index" class="grid bg-yellow-400 w-30 h-44 text-wrap  ml-3 rounded-md m-1 ">
-      <h4 class="text-left font-semibold">{{ service.name}}</h4>
-      <p class="max-w-40 max-h-40 text-wrap text-sm"> {{ service.description }}</p>
+  <div class="cont-serv ">
+    <div v-for="(service,index) in services" :key="index" class="grid  text-wrap  ml-3 rounded-md m-1 ">
+      
+      <img class="h-20 w-20" :src="service.imagePath" :alt="service.name">
+      <h4 class="text-left font-semibold uppercase">{{ service.name}}</h4>
+      <p class="w-52 h-40 text-wrap text-sm "> {{ service.description }}</p>
+      
     </div>
 
   </div>
@@ -37,7 +40,7 @@ export default {
     };
   },
   created() {
-    this.Servicefitft = services[10].name
+    this.Servicefitft = services[1].imagePath
   }
 };
 </script>
