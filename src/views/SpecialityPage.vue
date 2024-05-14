@@ -1,4 +1,6 @@
 <template>
+
+
     <!-- department services mobile view -->
     <div class="m-2 rounded-lg flex lg:grid lg:grid-cols-5 overflow-hidden ">
         <!-- startshere -->
@@ -287,8 +289,15 @@
                     of COVID-19 and related respiratory illnesses.
                 </p>
             </div>
-            <img src="../resources/image/" alt="" class="w-20 h-20 m-4">
+            <img src="/public/image/black logo.jpg" alt="" class="w-20 h-20 m-4">
         </div>
+    </div>
+    <div>
+        <ServicesAll/>
     </div>
 
 </template>
+
+<script setup>                                                                                                                                                                                                                                              
+import ServicesAll from '@/private/ServicesAll.vue';
+</script>

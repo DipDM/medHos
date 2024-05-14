@@ -30,7 +30,7 @@
     }
 
     .cont-serv {
-        @apply mx-3 bg-pink-500 p-3 rounded-lg flex items-center my-5;
+        @apply mx-3  p-3 rounded-lg flex flex-row row-span-5 w-screen flex-wrap items-center my-5 ;
     }
 
     .sec-div {
