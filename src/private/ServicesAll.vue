@@ -36,11 +36,13 @@ export default {
   data() {
     return {
       services: services,    //exporting all data at once
-      Servicefitft:''       // For making individual data output from list
+      Servicefitft:'',       // For making individual data output from list
+
     };
   },
   created() {
     this.Servicefitft = services[1].imagePath
-  }
+  },
+  
 };
 </script>

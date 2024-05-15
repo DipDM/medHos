@@ -1,4 +1,4 @@
-export const services = [
+export const test = [
     {
         "name": "anesthesiology",
         "description": "Providing anesthesia services for surgical procedures and pain management interventions.",
