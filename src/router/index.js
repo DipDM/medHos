@@ -2,12 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SpecialityPage from '../views/SpecialityPage.vue'
 import NotFoundPage from '../views/NotFoundPage.vue'
-import ReviewSection from '@/private/ReviewSection.vue'
+import ReviewPage from '@/private/reviews/ReviewPage.vue'
 import testPage from '@/private/testPage.vue'
+import ArticlePage from '@/views/ArticlePage.vue'
+import ServiceTemplate from '@/private/services/ServiceTemplate.vue'
 
 
 const router = createRouter({
+  mode: 'history',
   history: createWebHistory(import.meta.env.BASE_URL),
+  
   routes: [
     {
       path: '/',
@@ -40,19 +44,29 @@ const router = createRouter({
     {
       path:'/Card',
       name:'/Card',
-      component: () => import('../private/ServicesAll.vue')
+      component: () => import('../private/services/ServicesAll.vue')
     },
     {
       path:'/reviews',
       name:'/reviews',
-      component: ReviewSection
+      component: ReviewPage
     },
     {
       name:'/test',
       path:'/test',
       component:testPage
     },
-  ]
+    {
+      name:'/articles',
+      path:'/articles',
+      component:ArticlePage
+    },
+    {
+      name:'/test/:name',
+      path:'/service/:name',
+      component:ServiceTemplate
+    }
+  ],
 })
 
 export default router

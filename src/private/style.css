@@ -30,7 +30,7 @@
     }
 
     .cont-serv {
-        @apply mx-3  p-3 rounded-lg grid grid-cols-6 w-screen flex-wrap items-center my-5 ;
+        @apply mx-5  p-3 rounded-lg grid grid-cols-4  items-center justify-center ;
     }
 
     .sec-div {
@@ -50,7 +50,7 @@
     }
 
     .quick-box {
-        @apply rounded-lg bg-red-300 px-3 font-bold border-yellow-300 border text-xs hover:bg-gradient-to-b hover:from-red-400 hover:via-red-500 hover:to-red-600 hover:scale-110 overflow-hidden transition-all ease-in-out duration-500;
+        @apply rounded-3xl bg-red-400 px-3 font-bold border-yellow-200 border text-xs hover:bg-gradient-to-b hover:from-red-400 hover:via-red-500 hover:to-red-600 hover:scale-110 overflow-hidden transition-all ease-in-out duration-500;
     }
 
 

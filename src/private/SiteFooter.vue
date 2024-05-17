@@ -4,13 +4,13 @@
         <footer class="m-3 max-w-screen">
             <div class="bg-white flex flex-col lg:flex-row justify-between bg-gradient-to-bl from-blue-50 to-blue-100">
                 <div class="flex justify-center m-3">
-                    <a href="../private/index.html" id="siteinfo" class="flex items-center shadow-black">
-                        <img class="object-cover w-10 h-10" src="/android-new-512x512.png" alt="Accensis Hosptials" />
+                    <RouterLink to="/"  id="siteinfo" class="flex items-center shadow-black">
+                        <img class="object-cover w-10 h-10" src="/public/assets/logo.png" alt="Accensis Hosptials" />
                         <div class="grid text-blue-950">
                             <span class="text-5xl font-semibold">Accencis</span>
                             <span class="text-xs ">Superspeciality Hosptials & Research Center</span>
                         </div>
-                    </a>
+                    </RouterLink>
                 </div>
                 <div class="grid grid-cols-2 lg:flex text-black justify-center rounded-lg border px-8 py-6 gap-2 ">
                     <div

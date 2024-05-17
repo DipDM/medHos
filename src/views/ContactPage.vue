@@ -24,7 +24,7 @@
         <div class="sm:flex items-center max-w-screen-xl">
             <div class="sm:w-1/2 p-10">
                 <div>
-                    <img src="/public/image/Re_ Requirement Gathering For Hospital Website/hospitalp10.jpeg"
+                    <img src="/public/assets/gallery/hospitalp10.jpeg"
                         alt="Contact" class=" shadow-[0_0_15px_blue] rounded-lg">
                 </div>
             </div>
@@ -77,7 +77,7 @@
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12080.73732861526!2d-74.0059418!3d40.7127847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA2JzEwLjAiTiA3NMKwMjUnMzcuNyJX!5e0!3m2!1sen!2sus!4v1648482801994!5m2!1sen!2sus"
                             frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
                         </iframe>
-                        <img src="./assets/asset 38.png" alt="" />
+                        <img src="/public/assets/gallery/hospitalp8.jpeg" alt="dfaf" class="w-20 h-20" />
                     </div>
                 </div>
                 <div class="row-start-1 row-end-3 group rounded-2xl gradient-hover-outer">
@@ -98,7 +98,7 @@
                             We are available , When You need Us.
                             We are Operable 24*7.
                         </p>
-                        <img src="./assets/asset 40.png" alt="" />
+                        <img src="/public/assets/gallery/hospitalp8.jpeg" alt="dfaf" class="w-20 h-20" />
                     </div>
                 </div>
                 <div class="row-start-4 row-end-6 group rounded-2xl gradient-hover-outer">
@@ -119,7 +119,7 @@
                             Want to Contact Us by Mailing Us, Sure You can.
                             drabcdefghij@gmail.com
                         </p>
-                        <img src="./assets/asset 38.png" alt="" />
+                        <img src="/public/assets/gallery/hospitalp8.jpeg" alt="dfaf" class="w-20 h-20" />
                     </div>
                 </div>
             </div>
