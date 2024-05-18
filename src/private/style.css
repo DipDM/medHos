@@ -34,15 +34,15 @@
     }
 
     .sec-div {
-        @apply w-40 h-36 m-4  overflow-hidden gap-5 transform transition duration-300 ease-in-out relative filter grayscale hover:grayscale-0 hover:scale-125 peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
+        @apply w-40 h-36 m-4  overflow-hidden gap-5 transform transition duration-300 ease-in-out relative filter grayscale hover:grayscale-0 hover:scale-125 ;
     }
 
     .sec-heading {
-        @apply flex items-center justify-center bg-green-600 text-center text-xs font-semibold sec-img;
+        @apply grid items-center justify-center bg-green-600 text-center text-xs font-semibold sec-img;
     }
 
     .sec-img {
-        @apply rounded-full w-28 h-28 shadow-xl peer-hover/alldept:grayscale-0 peer-hover/alldept:scale-125;
+        @apply  w-28 h-28 shadow-xl ;
     }
 
     .sec-text {

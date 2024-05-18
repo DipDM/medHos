@@ -2,69 +2,44 @@
     <div class="m-3 px-3 ">
 
         <div v-if="service">
-            <h1 class="text-2xl font-bold">Department Of <span class="text-blue-700">{{ service.name }}</span></h1>
-            <p class="text-gray-600">{{ service.description }}</p>
-        </div>
-
-
-
-
-        <a href="" class="text-4xl">{{ Servicefitft }}</a>
-        <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
-    </div>
-
-
-    <!-- doctorname -->
-    <div>
-        <div class="bg-white py-24 sm:py-32">
-            <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our <span
-                            class="text-blue-700">Experts</span>
-                    </h2>
-                    <p class="mt-6 text-lg leading-8 text-gray-600">They always care for you to be healthy
-                    </p>
+            <h1 class="text-2xl font-bold">Department Of <span class="text-blue-700">{{ service.department_name
+                    }}</span></h1>
+            <p class="text-gray-600">{{ service.department_detail }}</p>
+            <div class=" grid items-center justify-center ">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our <span
+                        class="text-blue-700">Experts</span>
+                </h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">They always care for you to be healthy
+                </p>
+            </div>
+            <div v-for="kite in service.department_services" :key="kite">
+                <div class="bg-white sm:py-32">
+                    <div class="mx-auto grid max-w-7xl my-4 py-4 gap-x-8 gap-y-6 px-6 lg:px-8 xl:grid-cols-3">
+                        <div class="max-w-2xl">
+                            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-blue-700">{{ kite.service_name }}
+                            </h2>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">They always care for you to be healthy
+                            </p>
+                        </div>
+                        <ul role="list" class="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                            <div v-for="specialist in kite.doctors" :key="specialist">
+                                <div
+                                    class="flex items-center gap-x-6 bg-gray-300 rounded-md border-b border-blue-300 hover:bg-cyan-300">
+                                    <img class="h-16 w-16 rounded-full grayscale" :src="specialist.closeuplink"
+                                        :alt="specialist.doctor_name">
+                                    <div>
+                                        <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                                            {{ specialist.doctor_name }}</h3>
+                                        <ul class="text-sm font-semibold leading-6 text-indigo-600 flex ">
+                                            <li v-for="lis in specialist.doctor_edu" :key="lis" class="px-1">{{ lis }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-                <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-16 w-16 rounded-full"
-                                src="../resources/image/Re_ Requirement Gathering For Hospital Website/drsudhir.jpeg"
-                                alt="">
-                            <div>
-                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Dr.
-                                    Sudhir Meshram</h3>
-                                <p class="text-sm font-semibold leading-6 text-indigo-600">Director</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-16 w-16 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt="">
-                            <div>
-                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                                    Leslie
-                                    Alexander</h3>
-                                <p class="text-sm font-semibold leading-6 text-indigo-600">Co-Founder / CEO</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center gap-x-6">
-                            <img class="h-16 w-16 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt="">
-                            <div>
-                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                                    Leslie
-                                    Alexander</h3>
-                                <p class="text-sm font-semibold leading-6 text-indigo-600">Co-Founder / CEO</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -75,7 +50,7 @@
 
 
 <script>
-import { services } from './ServicesList.js';
+import { departments } from './ServicesList.js';
 
 export default {
     data() {
@@ -93,15 +68,11 @@ export default {
     },
     methods: {
         loadService(name) {
-            this.service = services.find(service => service.name.toLowerCase() === name.toLowerCase());
+            this.service = departments.find(service => service.department_name.toLowerCase() === name.toLowerCase());
             window.scrollTo(0, 0);
-        
+
         }
     }
-    // created() {
-    //     const serviceName = this.$route.params.name;
-    //     this.service = services.find(service => service.name === serviceName);
-    // }
 };
 
 </script>
