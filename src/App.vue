@@ -1,7 +1,8 @@
 <template>
-  <header class="sticky top-0 bg-white ">
+  <header class="sticky top-0 bg-white z-50">
     <SiteHeader/>
   </header>
+
   <RouterView />
   
   <body>
@@ -17,6 +18,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import SiteFooter from './private/SiteFooter.vue'
 import SiteHeader from './private/SiteHeader.vue'
+
 
 </script>
 

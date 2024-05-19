@@ -1,9 +1,21 @@
 <template>
+    <div id="tem">
+        <ol v-if="id = 'temp'"  class="p-3 m-2 gap-2 bg-gray-200 inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <i class="fa-solid fa-house"></i>
+            </li>
+            <li class="inline-flex items-center">
+                |
+            </li>
+            <li class="inline-flex items-center">service</li>
+            <li>|</li>
+            <li>{{ service.department_name }}</li>
+        </ol>
+    </div>
     <div class="m-3 px-3 ">
-
+        
         <div v-if="service">
-            <h1 class="text-2xl font-bold">Department Of <span class="text-blue-700">{{ service.department_name
-                    }}</span></h1>
+            <h1 class="text-2xl font-bold">Department Of <span class="text-blue-700">{{ service.department_name}}</span></h1>
             <p class="text-gray-600">{{ service.department_detail }}</p>
             <div class=" grid items-center justify-center ">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our <span
@@ -16,7 +28,8 @@
                 <div class="bg-white sm:py-32">
                     <div class="mx-auto grid max-w-7xl my-4 py-4 gap-x-8 gap-y-6 px-6 lg:px-8 xl:grid-cols-3">
                         <div class="max-w-2xl">
-                            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-blue-700">{{ kite.service_name }}
+                            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-blue-700">{{ kite.service_name
+                                }}
                             </h2>
                             <p class="mt-6 text-lg leading-8 text-gray-600">They always care for you to be healthy
                             </p>

@@ -1,7 +1,8 @@
 <template>
-
+  
   <div class="cont-serv">
-    <div v-for="(department, index) in departments" :key="index" class="max-h-56 max-w-96 items-center hover:shadow-2xl text-wrap bg-slate-200 ml-3 p-1 rounded-md m-1 ">
+    <div v-for="(department, index) in departments" :key="index"
+      class="max-h-56 max-w-96 items-center hover:shadow-2xl text-wrap bg-slate-200 ml-3 p-1 rounded-md m-1 ">
       <router-link :to="'/service/' + department.department_name">
         <h2 class="text-lg font-semibold text-center">{{ department.department_name }}</h2>
       </router-link>
@@ -22,9 +23,12 @@ export default {
 
     };
   },
-  // created() {
-  //   this.Servicefitft = services[1].imagePath
-  // },
+  
 
 };
 </script>
+
+
+// created() {
+  //   this.Servicefitft = services[1].imagePath
+  // },

@@ -16,12 +16,12 @@
 
 
 <script>
-import { articlelist } from './articledata.js';
+import { articleslist } from './articlesList.js';
 
 export default {
     data() {
         return {
-            articles: articlelist[0],
+            articles: articleslist[0],
         }
     }
 };

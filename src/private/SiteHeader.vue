@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <!-- SiteHeader -->
         <header
             class="p-3 flex sticky bg-white md:sticky shadow-[0_0_15px_blue] z-50 top-0 justify-between items-center">
@@ -14,9 +14,9 @@
             </a>
             <nav class="hidden lg:flex items-end pl-9 gap-12">
                 <RouterLink to="/" class="font-medium hover:text-black text-blue-600">Home</RouterLink>
-                <RouterLink to="/Specialities" class="font-medium hover:text-black text-blue-600">Specialities
+                <RouterLink to="/service" class="font-medium hover:text-black text-blue-600">Specialities
                 </RouterLink>
-                <RouterLink to="/articles" class="font-medium hover:text-black text-blue-600">Articles</RouterLink>
+                <RouterLink to="/article" class="font-medium hover:text-black text-blue-600">Articles</RouterLink>
                 <RouterLink to="/about" class="font-medium hover:text-black text-blue-600">About</RouterLink>
                 <RouterLink to="/contact" class="font-medium hover:text-black text-blue-600">Contact</RouterLink>
 
