@@ -25,11 +25,11 @@
                 class="hidden lg:flex gap-2 items-center border bg-red-500 text-white hover:bg-red-400 px-4 py-2 rounded-lg">
                 Book Appointment
             </button>
-            <button class="p-2 lg:hidden" @click="showNavbar">
+            <button class="p-2 lg:hidden" @click="toggleNavbar" @click.stop> 
                 <span class="material-symbols-outlined text-blue-600"> menu </span>
             </button>
             <!-- For Mobile view -->
-            <div id="Mobile-Nav" v-if="isNavbar"
+            <div id="Mobile-Nav" v-if="isNavbar" @click="hideNavbar" 
                 class=" fixed bg-white shadow-[0_0_15px_blue] inset-0 p-3  z-10 md:hidden rounded-lg transition-all duration-500 transform ease-in-out mb-56">
                 <div id="header_mobile" class="flex justify-between">
                     <a href="index.html" id="siteinfo" class="flex gap-2 items-center">
@@ -45,19 +45,19 @@
                 </div>
                 <div class="rounded-xl bg-white ">
                     <nav class="grid justify-center items-center mt-6">
-                        <RouterLink to="/"
+                        <RouterLink to="/" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Home</RouterLink>
-                        <RouterLink to="/about"
+                        <RouterLink to="/about" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             About</RouterLink>
-                        <RouterLink to="/articles"
+                        <RouterLink to="/articles" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Articles</RouterLink>
-                        <RouterLink to="/Specialities"
+                        <RouterLink to="/service" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Specialities</RouterLink>
-                        <RouterLink to="/contact"
+                        <RouterLink to="/contact" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Contact</RouterLink>
                     </nav>
@@ -77,18 +77,45 @@
 
 <script>
 export default {
-    data() {
-        return {
-            isNavbar: false
-        };
+  data() {
+    return {
+      isNavbar: false
+    };
+  },
+  methods: {
+    toggleNavbar(event) {
+      this.isNavbar = !this.isNavbar;
+      if (this.isNavbar) {
+        this.addClickListener();
+      } else {
+        this.removeClickListener();
+      }
+      event.stopPropagation();
     },
-    methods: {
-        showNavbar() {
-            this.isNavbar = true;
-        },
-        hideNavbar() {
-            this.isNavbar = false;
-        }
+    showNavbar(event) {
+      this.isNavbar = true;
+      this.addClickListener();
+      event.stopPropagation();
+    },
+    hideNavbar() {
+      this.isNavbar = false;
+      this.removeClickListener();
+    },
+    addClickListener() {
+      document.addEventListener('click', this.handleClickOutside);
+    },
+    removeClickListener() {
+      document.removeEventListener('click', this.handleClickOutside);
+    },
+    handleClickOutside(event) {
+      const navbar = this.$refs.navbar;
+      if (navbar && !navbar.contains(event.target)) {
+        this.hideNavbar();
+      }
     }
+  },
+  beforeUnmount() {
+    this.removeClickListener();
+  }
 };
 </script>

@@ -1,18 +1,17 @@
 <template>
-    <section class="bg-blue-100 rounded-sm m-3 p-3 ">
-        <h1 class="text-center text-4xl font-bold">
-            Reviews
+    <section class="bg-blue-100 rounded-sm m-3 p-2 md:p-3 ">
+        <h1 class="text-center text:3xl md:text-4xl font-bold">
+            People Thoughts For <span class="text-blue-800">Us</span>
         </h1>
         <div class="flex items-start justify-center m-4 gap-1">
             <i class="fa-solid fa-star text-yellow-500" v-for="n in 5" :key="n"></i>
             <p class="text-xs font-bold"> Ratings</p>
         </div>
-        <div class="grid grid-cols-3 m-3 justify-center rounded-lg text-center mx-3 my-4 p-5">
-            <div v-for="(review, index) in reviews" :key="index"
-                class="border bg-green-300 rounded-lg text-blue-900 mx-2 ">
-                <div v-if="index <= 2">
+        <div class="grid md:grid-cols-3 m-2 justify-center rounded-lg text-center md:mx-3 my-4 md:p-5 gap-2">
+            <div v-for="(review, index) in reviews" :key="index">
+                <div v-if="index <= 2" class="border bg-orange-200 rounded-lg text-blue-900">
                     <i class="fa-solid fa-quote-right"></i>
-                    <div class="text-sm md:text-xl italic font-medium">
+                    <div class="text-sm md:text-xl italic font-medium px-2">
                         <blockquote>{{ review.review_body }}</blockquote>
                     </div>
                     <div class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse p-3">
@@ -28,7 +27,7 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <router-link to="/Specialities"><button
+            <router-link to="/reviews"><button
                     class="border-blue-950 bg-blue-600 p-2 rounded-lg text-white hover:bg-blue-700  ">Read More
                     Reviews</button></router-link>
         </div>

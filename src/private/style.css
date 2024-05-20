@@ -30,7 +30,7 @@
     }
 
     .cont-serv {
-        @apply mx-5  p-3 rounded-lg grid grid-cols-4  items-center justify-center ;
+        @apply mx-5  p-3 rounded-lg grid  md:grid-cols-4  items-center justify-center ;
     }
 
     .sec-div {

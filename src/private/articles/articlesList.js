@@ -64,7 +64,7 @@ export const articleslist = [
         summary: "This article explores the future trends and potential impacts of artificial intelligence on various industries.This article explores the future trends and potential impacts of artificial intelligence on various industries.This article explores the future trends and potential impacts of artificial intelligence on various industries.This article explores the future trends and potential impacts of artificial intelligence on various industries.",
         tags: ["AI", "Technology", "Future"],
         category: "Technology",
-        image_link: "/public/assets/gallery/hospitalp10.jpeg",
+        image_link: "/public/assets/gallery/hospitalp13.jpeg",
         content:[
           {
             ct_heading :"dasgs",

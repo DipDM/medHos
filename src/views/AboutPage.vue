@@ -74,6 +74,7 @@
 <script setup>
 import { departments } from '@/private/services/ServicesList';
 
+
 </script>
 
 <style></style>

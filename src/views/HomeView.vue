@@ -26,7 +26,7 @@
             <div class="max-w-xl text-center md:justify-start my-52 ltr:sm:text-left rtl:sm:text-right">
                 <h1 class="font-extrabold text-sm md:text-3xl">
                     Welcome, Where Health is Prioritize
-                    <strong class="block font-extrabold text-sm md:text-6xl text-blue-800"> Accensis Hosptials </strong>
+                    <strong class="block font-extrabold text-sm md:text-6xl text-blue-800"> Accencis Hosptials </strong>
                 </h1>
 
                 <p class="mt-4 max-w-lg sm:text-xl/relaxed text-sm md:text-2xl">
@@ -89,5 +89,6 @@
 <script setup>
 import ReviewSection from '@/private/reviews/ReviewSection.vue';
 import ArticleSection from '@/private/articles/ArticleSection.vue';
+
 
 </script>

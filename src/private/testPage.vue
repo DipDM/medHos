@@ -1,5 +1,44 @@
 <template>
-    <div class="all-depsec-main">
+  <section>
+    <div class="text-6xl item text-center">Contact</div>
+  </section>
+
+
+
+  <section>
+    <div class="carousel-container relative w-full max-w-4xl mx-auto overflow-hidden">
+      <div class="flex transition-transform duration-500 ease-in-out"
+        :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+        <div v-for="(article, index) in articles" :key="index" class="carousel-item w-full flex-shrink-0">
+          <div>
+            <img :src="article.image_link" :alt="article.title">
+          </div>
+          <article class="p-4 bg-white rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">{{ article.title }}</h2>
+            <p class="text-gray-700">{{ article.summary }}</p>
+          </article>
+        </div>
+      </div>
+      <button @click="prev"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+        <span class="material-symbols-outlined">
+          arrow_back_ios
+        </span>
+      </button>
+      <button @click="next"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+        <span class="material-symbols-outlined">
+          arrow_forward_ios
+        </span>
+      </button>
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <span v-for="(article, index) in articles" :key="index" @click="setCurrentIndex(index)"
+          :class="{ 'bg-gray-800': index === currentIndex, 'bg-gray-300': index !== currentIndex }"
+          class="block w-3 h-3 rounded-full cursor-pointer transition-colors duration-300"></span>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="all-depsec-main">
         <h1 class="all-dephead">All Departments</h1>
         <div>
             <div v-for="spell in test" :key="spell.name">
@@ -14,16 +53,16 @@
                     </ul>
                 </div>
             </div>
-        </div>
-
+        </div> -->
+  <!-- 
         <div class="all-depdiv">
             <a href="" v-for="(service, index) in fanta" :key="index" class="quick-box">{{ service.name }}</a>
 
         </div>
         <a href="" class="text-4xl">{{ Servicefitft }}</a>
-        <!-- <img :src="test[1].imagePath" alt="asdasd"> -->
-    </div>
-    <div class="cont-serv ">
+        <img :src="test[1].imagePath" alt="asdasd"> -->
+  <!-- </div> -->
+  <!-- <div class="cont-serv ">
         <div v-for="service in fanta" :key="service.name" class="grid  text-wrap  ml-3 rounded-md m-1 ">
 
             <img class="h-20 w-20" :src="service.imagePath" :alt="service.name">
@@ -42,9 +81,9 @@
     </div>
     <div v-for="number in 3" :key="number">
         <p>sda</p>
-    </div>
-    <TestPage2 />
-    <!-- <div>
+    </div> -->
+  <TestPage2 />
+  <!-- <div>
       <h2>Our Services</h2>
       <ul class=" grid items-center justify-center">
         <li v-for="(service, index) in services" :key="index">
@@ -54,20 +93,20 @@
       </ul>
     </div> -->
 
-
-    <a href="" class="text-4xl">{{ Servicefitft }}</a>
-    <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
-    <div class="all-depsec-main">
+  <!-- 
+    <a href="" class="text-4xl">{{ Servicefitft }}</a> -->
+  <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
+  <!-- <div class="all-depsec-main">
         <h1 class="all-dephead">All Departments</h1>
         <div class="all-depdiv">
             <a href="" v-for="(service, index) in services" :key="index" class="quick-box">{{ service.name }}</a>
 
         </div>
     </div>
-    
-    
-    <!-- doctorname -->
-    <div>
+     -->
+
+  <!-- doctorname -->
+  <!-- <div>
         <div class="bg-white py-24 sm:py-32">
             <div class=" grid items-center justify-center ">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our <span
@@ -125,17 +164,17 @@
                 </ul>
             </div>
         </div>
-    </div>
-    
-    <a href="" class="text-4xl">{{ Servicefitft }}</a>
-        <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
+    </div> -->
 
-        // created() {
-    //     const serviceName = this.$route.params.name;
-    //     this.service = services.find(service => service.name === serviceName);
-    // }
-<!-- All our Team -->
-<section
+  <!-- <a href="" class="text-4xl">{{ Servicefitft }}</a> -->
+  <!-- <img :src="services[1].imagePath" alt="asdasd"> -->
+
+  // created() {
+  // const serviceName = this.$route.params.name;
+  // this.service = services.find(service => service.name === serviceName);
+  // }
+  <!-- All our Team -->
+  <!-- <section
     class="grid lg:grid-cols-10 md:grid-cols-5 z-10 grid-cols-3 py-7 px-3 border-yellow-400 rounded-lg bg-blue-300 overflow-hidden lg:mx-5">
     <div class="sec-div peer/alldept group ">
       <span class="sec-heading peer/dipesh ">All Our Team
@@ -756,10 +795,10 @@
       </span>
     </div>
 
-  </section>
+  </section> -->
 </template>
 
-<script>
+<!-- <script>
 import { test } from '../private/testPage.js';
 
 
@@ -776,6 +815,58 @@ export default {
         this.Servicefitft = test[1].imagePath;
     },
 };
+</script> -->
+
+<script setup>import TestPage2 from './TestPage2.vue';
+import { articleslist } from '../private/articles/articlesList.js'</script>
+<script>
+export default {
+  data() {
+    return {
+      currentIndex: 0,
+      interval: null,
+      articles: articleslist
+    };
+  },
+  mounted() {
+    this.startAutoSlide();
+  },
+  beforeUnmount() {
+    clearInterval(this.interval);
+  },
+  methods: {
+    prev() {
+      this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.articles.length - 1;
+    },
+    next() {
+      this.currentIndex = (this.currentIndex < this.articles.length - 1) ? this.currentIndex + 1 : 0;
+    },
+    setCurrentIndex(index) {
+      this.currentIndex = index;
+    },
+    startAutoSlide() {
+      this.interval = setInterval(this.next, 3000);
+    }
+  }
+};
 </script>
 
-<script setup>import TestPage2 from './TestPage2.vue';</script>
+<style scoped>
+.carousel-container {
+  height: 700px;
+  position: relative;
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+button {
+  z-index: 10;
+}
+
+span {
+  width: 10px;
+  height: 10px;
+}
+</style>
