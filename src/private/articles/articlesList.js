@@ -9,7 +9,7 @@ export const articleslist = [
         image_link: "/public/assets/gallery/hospitalp10.jpeg",
         content:[
           {
-            ct_heading :"dasgs",
+            ct_heading :"How to Wash hands ",
             ct_para:[
               {
                 ct_para_list:""

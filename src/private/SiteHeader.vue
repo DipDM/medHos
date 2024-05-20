@@ -22,8 +22,9 @@
 
             </nav>
             <button
-                class="hidden lg:flex gap-2 items-center border bg-red-500 text-white hover:bg-red-400 px-4 py-2 rounded-lg">
-                Book Appointment
+                class="hidden lg:flex gap-2 lg:items-center lg:justify-center border bg-red-500 text-white hover:bg-red-400 px-4 py-2 rounded-lg">
+                <a href="tel:+919890550493" class="flex justify-center items-center gap-2">
+                  Call to Book Appointment<i class="fa-solid fa-user-doctor p-1"></i> </a>
             </button>
             <button class="p-2 lg:hidden" @click="toggleNavbar" @click.stop> 
                 <span class="material-symbols-outlined text-blue-600"> menu </span>
@@ -48,15 +49,17 @@
                         <RouterLink to="/" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Home</RouterLink>
+                            <RouterLink to="/service" @click="hideNavbar"
+                            class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
+                            Specialities</RouterLink>
+                            <RouterLink to="/article" @click="hideNavbar"
+                            class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
+                            Articles</RouterLink>
                         <RouterLink to="/about" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             About</RouterLink>
-                        <RouterLink to="/articles" @click="hideNavbar"
-                            class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
-                            Articles</RouterLink>
-                        <RouterLink to="/service" @click="hideNavbar"
-                            class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
-                            Specialities</RouterLink>
+                        
+                        
                         <RouterLink to="/contact" @click="hideNavbar"
                             class="font-medium text-blue-600 m-3 p-3 text-center hover:bg-slate-200 hover:rounded-lg">
                             Contact</RouterLink>
@@ -65,7 +68,7 @@
                     <div class="grid items-center justify-center">
                         <button
                             class="mt-6 flex w-full gap-2 justify-center items-center  font-bold border text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-lg">
-                            Book Appointment
+                            <a href="tel:+919890550493" class="flex justify-center items-center gap-2">Call to Book Appointment<i class="fa-solid fa-user-doctor p-1" ></i></a>
                         </button>
                     </div>
                     <hr class="w-48 h-1 mx-auto my-14 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">

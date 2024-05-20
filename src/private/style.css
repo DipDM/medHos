@@ -50,7 +50,7 @@
     }
 
     .quick-box {
-        @apply rounded-3xl bg-red-400 px-3 font-bold border-yellow-200 border text-xs hover:bg-gradient-to-b hover:from-red-400 hover:via-red-500 hover:to-red-600 hover:scale-110 overflow-hidden transition-all ease-in-out duration-500;
+        @apply rounded-3xl bg-gradient-to-r from-green-300 to-blue-300  lg:hover:from-orange-300 lg:hover:to-yellow-200  px-3 font-bold border-yellow-200 border text-xs lg:hover:bg-gradient-to-r hover:scale-110 overflow-hidden transition-all ease-in-out duration-500;
     }
 
 
@@ -63,11 +63,11 @@
     /* All Departmentsection */
 
     .all-depsec-main {
-        @apply grid items-center  mx-2 bg-gradient-to-bl from-blue-50 to-blue-100 w-fit rounded-lg px-4 py-5
+        @apply flex flex-col items-center  mx-2 bg-gradient-to-bl from-blue-50 to-blue-100 w-fit rounded-lg px-4 py-5
     }
 
     .all-dephead{
-        @apply flex justify-center font-bold text-3xl p-6;
+        @apply font-bold text-3xl p-6;
     }
 
     .all-depdiv{
