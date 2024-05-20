@@ -1,11 +1,18 @@
 <template>
-  <section>
+
+
+
+
+
+
+
+  <!-- <section>
     <div class="text-6xl item text-center">Contact</div>
-  </section>
+  </section> -->
 
 
 
-  <section>
+  <!-- <section>
     <div class="carousel-container relative w-full max-w-4xl mx-auto overflow-hidden">
       <div class="flex transition-transform duration-500 ease-in-out"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
@@ -37,7 +44,7 @@
           class="block w-3 h-3 rounded-full cursor-pointer transition-colors duration-300"></span>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- <div class="all-depsec-main">
         <h1 class="all-dephead">All Departments</h1>
         <div>

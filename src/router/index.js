@@ -7,6 +7,7 @@ import testPage from '@/private/testPage.vue'
 import ArticlePage from '@/views/ArticlePage.vue'
 import ServiceTemplate from '@/private/services/ServiceTemplate.vue'
 import ArticleTemplate from '@/private/articles/ArticleTemplate.vue'
+import DirectorPage from '@/private/DirectorPage.vue'
 
 
 const router = createRouter({
@@ -58,6 +59,11 @@ const router = createRouter({
       path: '/reviews',
       name: '/reviews',
       component: ReviewPage
+    },
+    {
+      path:'/director',
+      name:'/director',
+      component:DirectorPage
     },
     {
       name: '/test',

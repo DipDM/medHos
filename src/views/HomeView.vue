@@ -47,38 +47,46 @@
     <div id="features-line" class=" mt-0 lg:mt-4 m-3 ">
         <div class="border rounded-lg overflow-hidden flex justify-center p-3 m-3">
             <div id="line4" class="flex gap-8 lg:p-6">
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Pulmonology</h3>
-                <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Nephrology</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Pulmonology
                 </h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Dietary Sciences</h3>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Nephrology</span>
+                </h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Cardiology</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Dietary
+                    Sciences</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Cardiology</span>
                 </h3>
                 <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Oncology &
                     Oncosurgery</h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Gynaecology</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Gynaecology</span>
                 </h3>
                 <span>•</span>
                 <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Our
                     Specialities</h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Maxillofacial</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Maxillofacial</span>
                 </h3>
                 <span>•</span>
                 <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Neurosurgery
                 </h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Pulmunology</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Pulmunology</span>
                 </h3>
                 <span>•</span>
                 <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">General
                     Surgery</h3>
                 <span>•</span>
-                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span class="text-blue-700">Urology &
-                    UroSurgery</span></h3>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7"><span
+                        class="text-blue-700">Urology &
+                        UroSurgery</span></h3>
                 <span>•</span>
                 <h3 class="my-0 mx-2 whitespace-nowrap font-display lg:text-2xl font-semibold leading-7">Ayurvedic</h3>
                 <span>•</span>
@@ -87,6 +95,7 @@
     </div>
 
     <!-- reviews -->
+    <DirectorSection />
 
     <section>
         <ReviewSection />
@@ -98,7 +107,7 @@
 <script setup>
 import ReviewSection from '@/private/reviews/ReviewSection.vue';
 import ArticleSection from '@/private/articles/ArticleSection.vue';
+import DirectorSection from '@/private/DirectorSection.vue';
 
 
 </script>
-
